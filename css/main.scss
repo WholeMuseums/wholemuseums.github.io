@@ -1,0 +1,63 @@
+
+@import "_fonts.scss";
+@import "_intro.scss";
+// @import "_account-modal.scss";
+
+a:hover{
+  opacity: 0.5;
+}
+
+@media (max-width: 1023px)
+{
+  .at-form {
+    padding:3rem 1rem;
+  }
+  .IntroPage {
+    .facade > div {
+      margin-top: 24vh;
+      .title {
+        font-size: 1.5rem; 
+      }
+      .subtitle {
+        font-size: 1rem;
+        padding: 0.7rem 0.7rem;
+        letter-spacing: 1px;
+      }
+    }
+    .s1 {
+      padding:5rem 0 8rem 0;
+    }
+    .s1-divider {
+      padding:2rem 0.5rem;
+      line-height: 1.6rem;
+      // font-weight: 200;
+      letter-spacing: -2px;
+      // text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 28px rgba(255,255,255,1) , 0 0 70px rgba(214, 179, 209,0.4), 0 0 80px rgba(191, 47, 172, 0.4), 0 0 100px rgba(188, 122, 179,0.4);
+      text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 70px #e0c9dd , 0 0 120px #d6b3d1 ;//, 0 0 80px #bf2fac , 0 0 100px #bc7ab3 ;
+    }
+    .s4 {
+      .neon {
+        zoom: 0.8;
+        letter-spacing:4px;
+      }
+      .divider {
+        font-size: 0.8rem;
+      }
+    }
+    .s3 > div {
+      padding:5% 0%;
+      img {
+        margin-top:0rem;
+      }
+    }
+    .footer {
+      height: 75vh;
+    }
+  }
+}
+@media (max-width: 1279px)
+{
+  .IntroPage .s3 > div {
+    width:96%;
+  }
+}

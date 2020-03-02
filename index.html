@@ -1,0 +1,582 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Whole Museums</title>
+  <meta name="description" content="Whole Museums is next generation museum protocols by cryptocurrency, blockchain and distributed web technology. We attempt to restructure museums as a distributed autonomous network system.">
+  <meta name="author" content="Whole Museums Task Force">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimal-ui, maximum-scale=1, minimum-scale=1" />
+
+  <meta property="og:title" content="Whole Museums" >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wholemuseums.org" >
+  <meta property="og:image" content="https://wholemuseums.org/img/wm-top-1080.jpg" >
+  <meta property="og:site_name"  content="wholemuseums.org" >
+  <meta property="og:description" content="Whole Museums is next generation museum protocols by cryptocurrency, blockchain and distributed web technology. We attempt to restructure museums as a distributed autonomous network system. / Whole Museumsは次世代のミュージアム・プロトコルです．ブロックチェーンや暗号通貨技術と共に，自律分散ネットワークシステムとしてミュージアムを再構築します．" >
+
+  <!-- <meta property="fb:app_id" content="App ID" /> -->
+  <meta property="article:publisher" content="https://wholemuseums.org" >
+  <meta name="twitter:card" content="summary_large_image" >
+  <meta name="twitter:site" content="@ghuzmi" >
+  <meta name="twitter:title" content="Whole Museums" >
+  <meta name="twitter:url" content="https://wholemuseums.org" >
+  <meta name="twitter:description" content="Whole Museums is next generation museum protocols by cryptocurrency, blockchain and distributed web technology. We attempt to restructure museums as a distributed autonomous network system. / Whole Museumsは次世代のミュージアム・プロトコルです．ブロックチェーンや暗号通貨技術と共に，自律分散ネットワークシステムとしてミュージアムを再構築します．" >
+  <meta name="twitter:image" content="https://wholemuseums.org/img/wm-top-1080.jpg">
+
+  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js" charset="utf-8"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
+
+  <!-- <script type="text/javascript" src="js/jquery-lang.js" charset="utf-8"></script> -->
+  <!-- <script type="text/javascript" src="js/jquery.localize.min.js" charset="utf-8"></script> -->
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+  <script>
+  $(function () {
+    var urlHash = location.hash;
+
+    var language = (window.navigator.languages && window.navigator.languages[0]) ||
+            window.navigator.language ||
+            window.navigator.userLanguage ||
+            window.navigator.browserLanguage;
+    var cl = google.loader.ClientLocation;
+    var cl_code;
+    if(cl) cl_code = cl.address.country_code;  //JP
+    // console.log(cl_code);
+
+    if(urlHash){
+      if (urlHash == '#ja') {
+        $(":lang(en)").hide();
+        $(":lang(ja)").show();
+      } else if (urlHash == '#en') {
+        $(":lang(ja)").hide();
+        $(":lang(en)").show();
+      } else {
+        urlHash = false;
+      }
+    }else{
+      urlHash = false;
+    }
+    if(!urlHash){
+      if(cl_code == 'JP' || language == 'ja-JP'){
+        $(":lang(en)").hide();
+        $(":lang(ja)").show();
+      }else{
+        $(":lang(ja)").hide();
+        $(":lang(en)").show();
+      }
+    }
+
+    // console.log(language);
+    $('#enbtn').on('click', function() {
+  		$(":lang(en)").show();
+      $(":lang(ja)").hide();
+  	});
+    $('#jabtn').on('click', function() {
+      $(":lang(en)").hide();
+      $(":lang(ja)").show();
+    });
+  });
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-105780460-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div class="IntroPage basefont">
+    <section class="facade" style="background-image:url(img/goh-network-1-1920px.jpg)" >
+      <header>
+        <!-- <a href="https://app.wholemuseums.org" class="ui black basic button">Sign In</a> <br> -->
+        <div class="change-lang-btn">
+          <!-- <small> -->
+            <div id="enbtn" class="btn">EN</div>
+            <div>&nbsp;/&nbsp;</div>
+            <div id="jabtn" class="btn"> JP</div>
+          <!-- </small> -->
+        </div>
+      </header>
+      <div>
+        <h1 class="ui huge center aligned header">
+          <span class="title">Whole Museums</span>
+        </h1>
+        <h2 class="ui huge center aligned header">
+          <span class="subtitle">Next Generation Museum Protocols</span>
+        </h2>
+      </div>
+    </section>
+
+    <section class="s1">
+      <div class="d1">
+        <div class="circle">
+          <div>
+            <img src="img/logo-sdw.svg" />
+          </div>
+        </div>
+        <div text class="ui text justified container intro basefont" lang="ja">
+          > Whole Museumsは、次世代の文化経済のプロトコルを開発する、非営利・公益目的のプロジェクトです。2017年に立ち上げられ、研究開発が行われています。<br>
+          <br>
+          -
+          <br>
+          あらゆる知の存在を認め、その価値を見出し、円滑に代謝させる社会は可能か。
+          人間が築き上げてきた文化的財を担う基盤は、そのためにどう生れ変わるべきか。
+          時を跨ぐヴィジョンと新しい文化経済に向けて、「Whole Museums」は自律分散システムとしてミュージアムを再構築します。<br/>
+          <br/>
+          現状のミュージアムは、税金に依存し過ぎた経営や暴走する市場に従属し策定される不公正なルールなどによって、自律性と柔軟性を失い続ける負の循環に陥っています。中央集権化された殿堂として、管理対象の恣意的な選別や価値判断を行うことには無理があり、新しい技術基盤がなければほとんどの文化的財は十分な評価や社会的活用もなされぬまま、ただ消えるだけになるでしょう。また、不透明な意思決定プロセスや肥大化する歪な権力は、技術革新や新しい表現といった時代の風を拒み、さらには市場活性化や新興領域の開拓を口実とした公共財の略奪を正当化する動きも加速しています。<br/>
+          ミュージアムは様々な圧力によって、全うすべき継承と分配の使命すら危機的な状況へと追い込まれています。<br/>
+          <br/>
+          我々はこれらの構造的な欠陥に起因する諸問題を踏まえ、暗号通貨やブロックチェーンなどの情報技術を用いることで文化経済の再構築を試みます。価値創出者による自発的な資産運用を促し、その社会還元の対価を得るための評価システムを設計します。新しいインセンティヴ機構では、市民とミュージアムは分断を越えて同期され、運用の透明性や持続可能な新規技術開発の必然性がプロトコルのレベルに仕込まれるシステムとなるでしょう。そしてミュージアムという言葉の意味を、特定の機関に限定するものとしてではなく、その存在や役割として、望む全ての人々が自らで担えるように更新することを目指します。<br/>
+          <br/>
+          次世代のミュージアムとは、文化にまつわるプロトコルを先導する存在でなければなりません。
+          これからの世界において、知とは、文化とは、価値とは、どうあるべきか。共に考え、変えていくための契機を技術によってつくります。
+        </div>
+        <div text class="ui text justified container intro basefont" lang="en">
+          Is it possible to accept all knowledge, find its value, and create societies which make that metabolism smoothly? To realize that, how should we change a foundation of the cultural goods that human beings built? "Whole Museums" reconstructs the museums as a distributed autonomous system, toward the vision beyond time and the new cultural economy. <br>
+          The current museums are in a vicious cycle that continues to lose autonomy and flexibility. Because that is making the arbitrary selection and value judgment of the cultural goods as the centralized hall of fame, and established unfair rules that are the subordinate to bloated markets and the tax-dependent managements. The closed operations of the industry and the distorted power refuse the winds of the times such as innovation and new expressions, and even force the mission of the museums such as succession and distribution into a crisis. <br>
+          To solve various problems caused by these structural defects, we attempt to rebuild the cultural economy by using new information technology such as cryptocurrency and blockchain. <br>
+          As an example, we design a new evaluation system to obtain reward as the social return by promoting voluntary management of the cultural goods by the value creator. That new incentive mechanism will be a system which is embedded transparency of operation and necessity of sustainable research&development of new technology into the protocol level, and sync with citizens and museums beyond division. And we aim to update the meaning of the word, "museums", not only specific institutions, but to allow everyone who wants its existence and the role to be in charge. <br>
+          The next generation museums have to become leaders in culture-related protocols. <br>
+          In the future world, what will become knowledge, culture, and value? We will create opportunities to think and change them by technology.
+        </div>
+        <div class="ui center aligned container author">
+          - Whole Museums Task Force, 2017 -<br>
+          <br>
+          <small>
+            <!-- <a href="https://web.archive.org/web/20180903111758/https://wholemuseums.org/">1st version of this page</a> -->
+            *内容が古いので近々アップデートします．
+          </small>
+        </div>
+        <!-- <div class="ui center aligned container intro basefont">
+          <br>
+          <br>
+          <br>
+          - - -<br>
+          <br>
+          <br>
+          <br>
+          <div>
+            <style type="text/css">
+            .BUTTON_SSF {
+              background: #F6D4EF;
+              background-image: -webkit-linear-gradient(top, #F6D4EF, #8BC0D0);
+              background-image: -moz-linear-gradient(top, #F6D4EF, #8BC0D0);
+              background-image: -ms-linear-gradient(top, #F6D4EF, #8BC0D0);
+              background-image: -o-linear-gradient(top, #F6D4EF, #8BC0D0);
+              background-image: linear-gradient(to bottom, #F6D4EF, #8BC0D0);
+              -webkit-border-radius: 20px;
+              -moz-border-radius: 20px;
+              border-radius: 20px;
+              /* height: 50px; */
+              line-height: 50px;
+              color: #FFFFFF;
+              font-family: Arial;
+              width: 400px;
+              font-size: 40px;
+              font-weight: 100;
+              padding: 40px;
+              box-shadow: 0px 0px 20px 0px #DBDBDB;
+              -webkit-box-shadow: 0px 0px 20px 0px #DBDBDB;
+              -moz-box-shadow: 0px 0px 20px 0px #DBDBDB;
+              text-shadow: 1px 1px 20px #7D7D7D;
+              text-decoration: none;
+              display: inline-block;
+              cursor: pointer;
+            }
+            .BUTTON_SSF:hover {
+              background: #F6D4EF;
+              text-decoration: none;
+            }
+            </style>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAINeftXdyVDfyKl88H4DDIFQTPAowLYK5_UYmJiPD2jwMnQ/viewform?usp=sf_link" class="BUTTON_SSF" target="_blank">募 集 中</a><br>
+            <br>
+          </div>
+          <p style="font-size:1.2rem">
+
+            情報ネットワーク
+          </p>
+        </div> -->
+
+      </div>
+    </section>
+
+    <div class="s1-divider">
+      D E C E N T R A L I Z E D - A P P L I C A T I O N - F O R - A R T S
+    </div>
+
+    <section class="s1">
+      <div class="d1" lang="ja">
+        <div class="ui container stackable two column grid">
+          <div class="column">
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="id card outline icon"></i>
+                  <i class="corner copyright icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">頑強で追跡可能な公証</h5>
+            <p>
+              あなたの文化的財を公的なブロックチェーン上に登記して証明書を発行します。たとえばクリエイターが作品を登記することで、その著作権の帰属や所有権移転の履歴確認などの運用を、半匿名性を保ったまま行うことができます。<br/>
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="sort content ascending icon"></i>
+                  <i class="corner bitcoin icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">拡張された追及権の実装</h5>
+            <p>
+              追跡可能な証明とスマートコントラクトによって、文化的財の利益の自動分配が可能になります。たとえば、文化的財の所有権が転売されるたびに、その利益の一部がクリエイターやプライマリー・パブリッシャーに自動的に送金されます。<br/>
+              <small><em>*追及権とは、セカンダリー市場での転売の際に著作者や相続人などが一定の割合での利益を徴収できる美術作家保護目的の譲渡不能な権利で、主にヨーロッパで運用されています。</em></small>
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="file code outline icon"></i>
+                  <i class="corner file text outline icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">ハイブリッド・リーダブルな新しい権利の開発</h5>
+            <p>
+              プログラマブルな契約であるスマートコントラクトは、電子資産の自動取引による新しい可能性を示しました。これから開拓が期待される、コンピュータが運用主体として混在する経済圏の中で、著作権や所有権など文化的財の権利はどのように変化すべきか。20世紀の資本家主導の反省を踏まえ、公益の観点から開発や検証を行います。
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="file archive outline icon"></i>
+                  <i class="corner archive icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">多様化するあらゆる表現形式の一般記述法の策定</h5>
+            <p>
+              人間が扱いうるあらゆる表現形式に、アーカイヴ技術は対応しきれていません。芸術作品という区切りの中ですら、印刷物や彫刻だけでなくコンピュータ・プログラムや一回性の無形現象といった様々な表現形式が見られ、特に新しいメディアほど未対策のまま、それに付随して市場の形成も困難となっています。この問題を克服し、文化的財を運用するための技術を開発します。
+            </p>
+          </div>
+          <div class="column">
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="bitcoin icon"></i>
+                  <i class="corner bitcoin icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">新しい評価システムによるインセンティヴ設計</h5>
+            <p>
+              誰もが自らの文化的財を活かせる社会へ。あなたの物や知識を社会に還元することで、それに相応しい報酬を得られるような文化的財流通と評価システムの設計を目指します。
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="university icon"></i>
+                  <i class="corner money icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">文化財の観光産業</h5>
+            <p>
+              WMの応用事例として挙げられるものの一つが観光産業です。現在、多くの文化財は保管や権利関係の摩擦により資産として上手く運用されておらず、税金で救済される対象となっています。しかしそれらは歴史により築かれた代替不可な資産であり、技術支援次第で価値創出が可能なものたちです。WMは情報技術の観点からこの問題に参入します。
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="globe icon"></i>
+                  <i class="corner gift icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">次世代の公共へ</h5>
+            <p>
+              使い方はあなた次第で、あなたのデータや成果はあなたのものです。WMはデータや市場の独占、ユーザーの囲い込みを行う営利プラットフォームではなく、様々な文化的財業務を次の段階へと移行させるネットワークです。たとえば、博物館や美術館、ギャラリーやアーティストが日々の業務を効率化したり、新しいビジネスモデル構築のために使うことができます。また特定分野における専門的な知見を持ちつつも制度的な不備によってそれを活かせない場合、新たなミュージアムを自律的に運営することができます。
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="empty heart icon"></i>
+                  <i class="corner empty heart icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">利用無料</h5>
+            <p>
+              WMの利用手数料は無料です。寄付による持続可能な開発と運用を模索します。<br/>
+              <small><em>*ブロックチェーン自体の使用料がわずかにかかります。(EthereumであればコントラクトのGas)。</em></small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d1" lang="en">
+        <div class="ui container stackable two column grid">
+          <div class="column">
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="id card outline icon"></i>
+                  <i class="corner copyright icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Robust and traceable notarization</h5>
+            <p>
+              Register your cultural goods on the public blockchain then issue a certificate. For example, when you as a creator register a work, you can do operations such as verifying the history of ownership transfer and the copyright attribution while maintaining semi-anonymity.<br/>
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="sort content ascending icon"></i>
+                  <i class="corner bitcoin icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Implementation of expanded resale right</h5>
+            <p>
+              Traceable proofs and smart contracts enable automatic redistribution of the profit of cultural goods. For example, whenever ownership of cultural goods is resold, part of its profit is automatically remitted to the creators and primary publishers. <br/>
+              <small><em>*Resale right (droit de suite) is a nontransferable right which aims at the protection of artists who can collect profits at a certain rate when the work is resold at the secondary market, and is mainly operated in Europe.</em></small>
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="file code outline icon"></i>
+                  <i class="corner file text outline icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Development of hybrid-readable new rights</h5>
+            <p>
+              Smart Contract, a programmable contract, showed new possibilities by automatic transactions of electronic assets. What should the rights of cultural goods such as copyrights and ownership change in the economic zone where the computers are mixed as the operating entity that is expected to develop in the future? Based on reflections that the rights was led by capitalists until the 21st century, we develop and verify it from the public interest point of view.
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="file archive outline icon"></i>
+                  <i class="corner archive icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Formulation of general description method in the form of diversifying expressions</h5>
+            <p>
+              Current archive technology can not cope with various forms of expression that humans can handle. Even in the area of artworks, not only printed matter and sculpture, but also various expressive forms such as computer programs and one-time intangible phenomenon exists. Particularly as new media are adopted, the countermeasures have not been taken so it is becoming difficult to form markets. We will develop new technology to operate cultural goods, then will solve this problem.
+            </p>
+          </div>
+          <div class="column">
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="bitcoin icon"></i>
+                  <i class="corner bitcoin icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Incentive design with a new evaluation system</h5>
+            <p>
+              To the society where everyone can utilize their cultural goods. We aim to design a distribution and evaluation system of cultural goods that can earn a reward appropriate for it, by returning your things and knowledge to society.
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="university icon"></i>
+                  <i class="corner money icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Tourism industry of cultural goods</h5>
+            <p>
+              One of the application examples of WM is the tourism industry. Currently, many cultural goods are not well utilized as assets due to preserving and rights-related friction, and are subject to relief by the tax. However, they are precious assets built on history, and the value creation is possible depending on technical support. WM will enter this issue from the perspective of information technology.
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="globe icon"></i>
+                  <i class="corner gift icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">The next generation public</h5>
+            <p>
+              The next generation public How you use this depends on you, and your data and creations are yours. WM is not a commercial platform that monopolizes the data and market, or encloses users. It is a network that shifts the operations of various cultural goods to the next stage. For example, museums, galleries and artists can make their day-to-day work more efficiently and can be used for building new business models. In addition, if you have professional knowledge in a specific field, but cannot make use of it due to institutional inadequacies, you can operate a new museum autonomously.
+            </p>
+
+            <div class="circle">
+              <div>
+                <i class="huge icons">
+                  <i class="empty heart icon"></i>
+                  <i class="corner empty heart icon"></i>
+                </i>
+              </div>
+            </div>
+            <h5 class="ui center aligned header basefont">Available free</h5>
+            <p>
+              WM's fee is free. We will seek sustainable development and operation through donation.<br/>
+              <small><em>* The charge for the blockchain itself will take slightly. (Gas of contract if Ethereum).</em></small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s2" style="background-image: url(img/goh-decor-1.jpg);">
+      <div lang="ja">
+        テスター募集の際、こちらでご案内します。<br/>
+        <br/>
+        <button class="ui black big basic button">COMING SOON</button>
+      </div>
+      <div lang="en">
+        We will inform you here when inviting testers.<br/>
+        <br/>
+        <button class="ui black big basic button">COMING SOON</button>
+      </div>
+    </section>
+
+    <section class="s4">
+      <div class="neon">
+        <i class="bitcoin icon"></i> AUTO DISTRIBUTION <i class="bitcoin icon"></i>
+      </div>
+      <div class="ui container monkey1">
+        <img class="ui fluid image" src="img/myMonkey-stepup-4.png">
+        <div class="ui horizontal inverted divider">
+          <!-- react-text: 124 -->Let's make the most of this super cool hero!<!-- /react-text -->
+        </div>
+        <img class="ui fluid image" src="img/myMonkey-stepup-reg.png">
+      </div>
+      <div class="neon">
+        <i class="bitcoin icon"></i> EASY REGISTRATION <i class="bitcoin icon"></i>
+      </div>
+    </section>
+
+    <section class="s3">
+      <div>
+        <div class="ui stackable very relaxed two column grid" lang="ja">
+          <div class="right floated seven wide computer sixteen wide mobile sixteen wide tablet column">
+            <div class="ui padded segment">
+              <div>
+                <div>WMは非営利で公益を目的とした事業です。</div>
+                <small><i aria-hidden="true" class="caret right icon"></i><!-- react-text: 141 --> DAOでの持続可能な組織構成を目指しています。<!-- /react-text --></small>
+              </div>
+            </div>
+            <div class="ui padded segment">
+              <div>
+                <div>WMはオープンソースを目指しています。</div>
+                <small><i aria-hidden="true" class="caret right icon"></i><!-- react-text: 147 --> 開発初期の間はクローズドで進め、ベータ版以降で公開します。現在は主に美術関係の専門機関と実証実験を進めています。<!-- /react-text --></small>
+              </div>
+            </div>
+            <div class="ui padded segment">
+              <div>
+                <div>WMはアルファ・バージョンです。</div>
+                <small><i aria-hidden="true" class="caret right icon"></i><!-- react-text: 153 --> ただいま試験運用と開発中です。 現在のα版では、Ethereumを主として、予備的にBitcoinのブロックチェーンを使用しています。今後は別の基盤技術へと移転する可能性があります。<!-- /react-text --></small>
+              </div>
+            </div>
+          </div>
+          <div class="right floated nine wide computer sixteen wide mobile sixteen wide tablet column">
+            <img class="ui fluid bottom aligned image" src="img/iphone-imac2.png">
+          </div>
+        </div>
+        <div class="ui stackable very relaxed two column grid" lang="en">
+          <div class="right floated seven wide computer sixteen wide mobile sixteen wide tablet column">
+            <div class="ui padded segment">
+              <div>
+                <div>WM is a non-profit and public-interest service.</div>
+                <small><i aria-hidden="true" class="caret right icon"></i><!-- react-text: 141 --> We aim to become DAO as a sustainable organization and a public foundation.<!-- /react-text --></small>
+              </div>
+            </div>
+            <div class="ui padded segment">
+              <div>
+                <div>WM aim to open source.</div>
+                <small><i aria-hidden="true" class="caret right icon"></i><!-- react-text: 147 --> The source will be closed in the early stages of development and will be released after the beta version. Currently we are making the proof of concept with specialist institutions mainly related to art. <!-- /react-text --></small>
+              </div>
+            </div>
+            <div class="ui padded segment">
+              <div>
+                <div>WM is in alpha version.</div>
+                <small><i aria-hidden="true" class="caret right icon"></i><!-- react-text: 153 --> It is now under development. In the current alpha version, we mainly use Ethereum and supplementally use Bitcoin's blockchain. In the future there is a possibility of transfer to another basic technology.<!-- /react-text --></small>
+              </div>
+            </div>
+          </div>
+          <div class="right floated nine wide computer sixteen wide mobile sixteen wide tablet column">
+            <img class="ui fluid bottom aligned image" src="img/iphone-imac2.png">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" style="background-image: url(img/goh-sudoku.jpg);">
+      <div class="backRGBA">
+        <div>
+          <div class="ui stackable very relaxed two column grid">
+            <div class="left floated eight wide computer sixteen wide mobile sixteen wide tablet column about">
+              <img class="ui tiny circular left floated image" src="img/logo.svg">
+              <h2 class="ui left aligned header">Whole Museums</h2>
+              <p>Whole Museums is next generation museum protocols by cryptocurrency, blockchain and distributed web technology. We attempt to restructure museums as a distributed autonomous network system.</p>
+            </div>
+            <div class="right floated eight wide computer sixteen wide mobile sixteen wide tablet column">
+              <div role="list" class="ui right floated list member">
+                <div role="listitem" class="item">
+                  <p>CONTACT</p>
+                  <!-- <img class="ui mini avatar top aligned image" src="img/members/goh.jpg"> -->
+                  <div class="content">
+                    <!-- react-text: 169 -->Founder / Developer<!-- /react-text -->
+                    <a href="http://gohuozumi.com" target="blank" class="header">
+                      <i aria-hidden="true" class="caret right icon"></i><span>Goh Uozumi</span>
+                    </a>
+                    <a href="http://twitter.com/ghuzmi" target="blank">
+                      <i aria-hidden="true" class="twitter square big fitted inverted link icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/goh_u/" target="blank">
+                      <i aria-hidden="true" class="instagram big inverted link icon"></i>
+                    </a>
+                    <a href="http://gohuozumi.com" target="blank">
+                      <i aria-hidden="true" class="globe big fitted inverted link icon"></i>
+                    </a>
+                    <a href="mailto:info.gohuozumi@gmail.com?subject=From WholeMuseum-site&amp;" target="blank">
+                      &nbsp;&nbsp;<i aria-hidden="true" class="envelope big inverted link icon"></i>
+                    </a>
+                  </div>
+                </div>
+                <p></p>
+              </div>
+              <div class="copy">
+                <i aria-hidden="true" class="copyright icon"></i><!-- react-text: 182 -->Whole Museums, 2017~ / Powered by WMTF.<!-- /react-text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
